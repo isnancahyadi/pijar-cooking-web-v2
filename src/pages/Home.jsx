@@ -1,16 +1,15 @@
+import React from "react";
+
 import "../style/Home.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Home() {
+const Home = () => {
   return (
     <div className="Home">
       {/* <!-- Start of header --> */}
       <header id="header">
-        <nav
-          className="navbar navbar-expand-lg"
-          // style={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
-        >
+        <nav className="navbar navbar-expand-lg">
           <div className="container-fluid mx-4">
             <a className="navbar-brand" href="">
               <img
@@ -371,6 +370,6 @@ function Home() {
       {/* <!-- end of footer --> */}
     </div>
   );
-}
+};
 
 export default Home;
