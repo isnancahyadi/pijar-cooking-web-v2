@@ -10,12 +10,12 @@
   overflow-x: hidden;
 }
 
-h1.text-primary-emphasis {
-  font-size: 4rem;
+h1 {
+  font-size: 4rem !important;
 }
 
-h2.text-primary-emphasis {
-  font-size: 2.5rem;
+h2 {
+  font-size: 2.5rem !important;
 }
 
 hr {
@@ -69,7 +69,7 @@ hr {
   display: flex;
 }
 
-button.btn.btn-primary {
+#btn {
   height: 50px;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -78,13 +78,13 @@ button.btn.btn-primary {
   border-color: rgb(215, 154, 255);
 }
 
-.carousel-item {
-  cursor: pointer;
-}
-
-button.btn.btn-primary:hover {
+#btn:hover {
   background-color: rgb(153, 63, 212);
   border-color: rgb(153, 63, 212);
+}
+
+.carousel-item {
+  cursor: pointer;
 }
 
 .bg-purple-decoration-2 {

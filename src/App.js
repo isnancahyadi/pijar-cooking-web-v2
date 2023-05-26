@@ -147,7 +147,9 @@ function App() {
               of the sea? Here's the answer
             </p>
             <form action="#">
-              <button className="btn btn-primary mt-3">Learn More</button>
+              <button id="btn" className="btn btn-primary mt-3">
+                Learn More
+              </button>
             </form>
           </div>
         </div>
@@ -183,7 +185,9 @@ function App() {
               everyone. Want to try it?
             </p>
             <form action="#">
-              <button className="btn btn-primary mt-3">Learn More</button>
+              <button id="btn" className="btn btn-primary mt-3">
+                Learn More
+              </button>
             </form>
           </div>
           <div className="col-md-6 text-md-start text-center">
