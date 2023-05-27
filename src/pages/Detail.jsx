@@ -1,10 +1,24 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 import "../style/Detail.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import recipeList from "../models/menu.json";
 
 const Detail = () => {
+  const detailRecipe = recipeList.menu;
+  const location = useLocation();
+  const [currentRecipe, setCurrentRecipe] = React.useState(null);
+
+  React.useEffect(() => {
+    const currentSlug = location?.pathname?.split("/")[2];
+
+    window.scrollTo(0, 0);
+
+    setCurrentRecipe(detailRecipe.find((res) => res.slug === currentSlug));
+  }, []);
+
   return (
     <div className="Detail">
       <Navbar />
@@ -13,11 +27,11 @@ const Detail = () => {
       <section id="content">
         <div className="container-fluid">
           <h1 className="text-center text-primary-emphasis">
-            Chicken Green Curry Bowl
+            {currentRecipe?.title}
           </h1>
           <div className="d-flex justify-content-center">
             <img
-              src="/assets/img/recipe/chicken-green-curry-bowl.jpg"
+              src={`/assets/img/recipe/${currentRecipe?.image}`}
               className="main-image"
             />
           </div>
@@ -90,8 +104,8 @@ const Detail = () => {
               className="video-directions"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/LIbKVpBQKJI"
-              title="How to Make - Chicken Green Curry Bowl"
+              src={currentRecipe?.video}
+              title={`How to Make - ${currentRecipe?.title}`}
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

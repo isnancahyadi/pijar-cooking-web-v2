@@ -1,6 +1,8 @@
 import React from "react";
 import RecipeCard from "../components/RecipeCard";
 
+import recipeList from "../models/menu.json";
+
 const RecipeTabs = () => {
   return (
     <>
@@ -58,18 +60,9 @@ const RecipeTabs = () => {
             aria-labelledby="ex3-tab-1"
           >
             <div className="row">
-              <RecipeCard
-                title="American Shrimp Fried Rice with Chili Fish Sauce"
-                image="american-shrimp-fried-rice-with-chili-fish-sauce.jpg"
-              />
-              <RecipeCard
-                title="Chicken Curry Black Cup with Rice Noodles"
-                image="chicken-curry-black-cup-with-rice-noodles.jpg"
-              />
-              <RecipeCard
-                title="Penne Pasta Tomato Sauce with Chicken Tomatoes"
-                image="penne-pasta-tomato-sauce-with-chicken-tomatoes.jpg"
-              />
+              {recipeList.menu.map((item, key) => (
+                <RecipeCard title={item?.title} image={item?.image} />
+              ))}
             </div>
           </div>
         </div>
