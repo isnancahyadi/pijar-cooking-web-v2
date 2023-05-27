@@ -152,7 +152,7 @@ const Profile = () => {
               <div className="row">
                 <div className="col-md-4 col-xs-12">
                   <div
-                    className="menu-recipe mt-2 mb-2"
+                    className="my-recipe mt-2 mb-2"
                     style={{
                       backgroundImage:
                         "url('/assets/img/recipe/spicy-fried-tubtim-fish-salad-spicy.jpg')",
@@ -168,7 +168,7 @@ const Profile = () => {
                 </div>
                 <div className="col-md-4 col-xs-12">
                   <div
-                    className="menu-recipe mt-2 mb-2"
+                    className="my-recipe mt-2 mb-2"
                     style={{
                       backgroundImage:
                         "url('/assets/img/recipe/sinigang-na-lechon-kawali.jpg')",
@@ -184,7 +184,7 @@ const Profile = () => {
                 </div>
                 <div className="col-md-4 col-xs-12">
                   <div
-                    className="menu-recipe mt-2 mb-2"
+                    className="my-recipe mt-2 mb-2"
                     style={{
                       backgroundImage:
                         "url('/assets/img/recipe/rice-with-basil-minced-pork.jpg')",
