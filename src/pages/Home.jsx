@@ -1,82 +1,16 @@
 import React from "react";
 
 import "../style/Home.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Carousel from "../components/Carousel";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
   return (
     <div className="Home">
-      {/* <!-- Start of header --> */}
-      <header id="header">
-        <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid mx-4">
-            <a className="navbar-brand" href="">
-              <img
-                id="logo-app"
-                src="/assets/img/logo-2.svg"
-                alt=""
-                style={{ width: "auto", height: "50px" }}
-              />
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarText"
-              aria-controls="navbarText"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              id="navbarText"
-              className="collapse navbar-collapse"
-              style={{ justifyContent: "space-between" }}
-            >
-              <ul className="navbar-nav">
-                <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
-                    Add Recipe
-                  </a>
-                </li>
-                <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
-                    Profile
-                  </a>
-                </li>
-              </ul>
-              <ul className="navbar-nav">
-                <li className="nav-item mx-1">
-                  <a
-                    className="nav-link text-white fs-4"
-                    href="#"
-                    style={{ textShadow: "2px 2px 4px #000000" }}
-                  >
-                    Login
-                  </a>
-                </li>
-                <li className="nav-item mx-1">
-                  <a
-                    className="nav-link text-white fs-4"
-                    href="#"
-                    style={{ textShadow: "2px 2px 4px #000000" }}
-                  >
-                    Register
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      {/* <!-- End of header --> */}
+      <Navbar />
 
       {/* <!-- Start of home section --> */}
       <section id="home" className="container-fluid">
@@ -240,143 +174,11 @@ const Home = () => {
             />
           </div>
         </div>
-        <div
-          id="carouselExampleAutoplaying"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="0"
-              className="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src="/assets/img/recipe/spicy-fried-tubtim-fish-salad-spicy.jpg"
-                className="d-block w-100 menu-recipe"
-              />
-              <div className="carousel-caption d-block">
-                <h2
-                  className="h2-home"
-                  style={{ textShadow: "2px 2px 4px #000000" }}
-                >
-                  Spicy Fried Tubtim Fish Salad Spicy
-                </h2>
-                <p
-                  className="fs-5"
-                  style={{ textShadow: "2px 2px 4px #000000" }}
-                >
-                  For those of you who want to enjoy protein and nutritious
-                  dishes with a spicy sensation
-                </p>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="/assets/img/recipe/sinigang-na-lechon-kawali.jpg"
-                className="d-block w-100 menu-recipe"
-              />
-              <div className="carousel-caption d-block">
-                <h2
-                  className="h2-home"
-                  style={{ textShadow: "2px 2px 4px #000000" }}
-                >
-                  Sinigang na Lechon Kawali
-                </h2>
-                <p
-                  className="fs-5"
-                  style={{ textShadow: "2px 2px 4px #000000" }}
-                >
-                  A typical Filipino dish made from pork that is fried using
-                  flour and then combined with soup
-                </p>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="/assets/img/recipe/penne-pasta-tomato-sauce-with-chicken-tomatoes.jpg"
-                className="d-block w-100 menu-recipe"
-              />
-              <div className="carousel-caption d-block">
-                <h2
-                  className="h2-home"
-                  style={{ textShadow: "2px 2px 4px #000000" }}
-                >
-                  Penne Pasta Tomato Sauce with Chicken
-                </h2>
-                <p
-                  className="fs-5"
-                  style={{ textShadow: "2px 2px 4px #000000" }}
-                >
-                  A pasta from Italy cooked with tomato sauce and sliced chicken
-                </p>
-              </div>
-            </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
+        <Carousel />
       </section>
       {/* <!-- End of popular recipe section --> */}
 
-      {/* <!-- start of footer --> */}
-      <footer className="main-footer" style={{ position: "relative" }}>
-        <div>
-          <h2 className="h2-home text-primary-emphasis text-center">
-            Eat, Cook, Repeat
-          </h2>
-          <p className="text-muted text-center">
-            Share your best recipe by uploading here !
-          </p>
-        </div>
-        <p className="footer-copyright text-center">
-          Copyright &copy; 2023 <br />
-          Dev By{" "}
-          <a href="https://github.com/isnancahyadi">Isnan Arif Cahyadi</a>
-        </p>
-      </footer>
-      {/* <!-- end of footer --> */}
+      <Footer />
     </div>
   );
 };

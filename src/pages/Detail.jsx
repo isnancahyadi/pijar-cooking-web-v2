@@ -1,80 +1,13 @@
 import React from "react";
 
 import "../style/Detail.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Detail = () => {
   return (
     <div className="Detail">
-      {/* <!-- Start of header --> */}
-      <header id="header">
-        <nav className="navbar navbar-expand-lg">
-          <div className="container-fluid mx-4">
-            <a className="navbar-brand" href="">
-              <img
-                id="logo-app"
-                src="/assets/img/logo-2.svg"
-                alt=""
-                style={{ width: "auto", height: "50px" }}
-              />
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarText"
-              aria-controls="navbarText"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              id="navbarText"
-              className="collapse navbar-collapse"
-              style={{ justifyContent: "space-between" }}
-            >
-              <ul className="navbar-nav">
-                <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
-                    Add Recipe
-                  </a>
-                </li>
-                <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
-                    Profile
-                  </a>
-                </li>
-              </ul>
-              <ul className="navbar-nav">
-                <li className="nav-item mx-1">
-                  <a
-                    className="nav-link text-white fs-4"
-                    href="#"
-                    style={{ textShadow: "2px 2px 4px #000000" }}
-                  >
-                    Login
-                  </a>
-                </li>
-                <li className="nav-item mx-1">
-                  <a
-                    className="nav-link text-white fs-4"
-                    href="#"
-                    style={{ textShadow: "2px 2px 4px #000000" }}
-                  >
-                    Register
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      {/* <!-- End of header --> */}
+      <Navbar />
 
       {/* <!-- Start of section --> */}
       <section id="content">
@@ -168,23 +101,7 @@ const Detail = () => {
       </section>
       {/* <!-- End of section --> */}
 
-      {/* <!-- start of footer --> */}
-      <footer className="main-footer" style={{ position: "relative" }}>
-        <div>
-          <h2 className="h2-detail text-primary-emphasis text-center">
-            Eat, Cook, Repeat
-          </h2>
-          <p className="text-muted text-center">
-            Share your best recipe by uploading here !
-          </p>
-        </div>
-        <p className="footer-copyright text-center">
-          Copyright &copy; 2023 <br />
-          Dev By{" "}
-          <a href="https://github.com/isnancahyadi">Isnan Arif Cahyadi</a>
-        </p>
-      </footer>
-      {/* <!-- end of footer --> */}
+      <Footer />
     </div>
   );
 };
