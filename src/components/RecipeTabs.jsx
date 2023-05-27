@@ -58,9 +58,18 @@ const RecipeTabs = () => {
             aria-labelledby="ex3-tab-1"
           >
             <div className="row">
-              <RecipeCard />
-              <RecipeCard />
-              <RecipeCard />
+              <RecipeCard
+                title="American Shrimp Fried Rice with Chili Fish Sauce"
+                image="american-shrimp-fried-rice-with-chili-fish-sauce.jpg"
+              />
+              <RecipeCard
+                title="Chicken Curry Black Cup with Rice Noodles"
+                image="chicken-curry-black-cup-with-rice-noodles.jpg"
+              />
+              <RecipeCard
+                title="Penne Pasta Tomato Sauce with Chicken Tomatoes"
+                image="penne-pasta-tomato-sauce-with-chicken-tomatoes.jpg"
+              />
             </div>
           </div>
         </div>
