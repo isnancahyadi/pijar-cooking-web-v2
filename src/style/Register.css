@@ -1,10 +1,10 @@
-h1 {
+.h1-register {
   font-family: "verdana";
   font-weight: 700;
   color: rgb(215, 154, 255);
 }
 
-.btn-primary {
+#btn-register {
   height: 60px;
   font-family: "verdana";
   font-weight: 700;
@@ -12,7 +12,7 @@ h1 {
   border-color: rgb(215, 154, 255);
 }
 
-.btn-primary:hover {
+#btn-register:hover {
   background-color: rgb(153, 63, 212);
   border-color: rgb(153, 63, 212);
 }
@@ -24,6 +24,6 @@ h1 {
   background-position: center;
 }
 
-a {
+#a-register {
   color: rgb(215, 154, 255);
 }

@@ -91,7 +91,7 @@ const Detail = () => {
           <div className="container">
             <div className="row mt-5 justify-content-md-center">
               <div className="col-6">
-                <h2 className="mb-3">Ingredients</h2>
+                <h2 className="h2-detail mb-3">Ingredients</h2>
                 <ul className="fs-5">
                   <li>400 grams chicken fillet</li>
                   <li>1 cup brown basmati rice</li>
@@ -109,7 +109,7 @@ const Detail = () => {
                 </ul>
               </div>
               <div className="col-6">
-                <h2 className="mb-3">Directions</h2>
+                <h2 className="h2-detail mb-3">Directions</h2>
                 <ul className="fs-5">
                   <li>
                     Cook the rice. Add the dry rice to a pot. You will need
@@ -152,7 +152,7 @@ const Detail = () => {
             </div>
           </div>
           <div className="container">
-            <h2 className="mt-5 mb-3">Video Directions</h2>
+            <h2 className="h2-detail mt-5 mb-3">Video Directions</h2>
             <iframe
               className="video-directions"
               width="100%"
@@ -171,7 +171,7 @@ const Detail = () => {
       {/* <!-- start of footer --> */}
       <footer className="main-footer" style={{ position: "relative" }}>
         <div>
-          <h2 className="text-primary-emphasis text-center">
+          <h2 className="h2-detail text-primary-emphasis text-center">
             Eat, Cook, Repeat
           </h2>
           <p className="text-muted text-center">

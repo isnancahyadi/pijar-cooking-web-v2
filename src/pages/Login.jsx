@@ -13,7 +13,7 @@ const Login = () => {
               <div className="container">
                 <div className="row justify-content-center align-items-center vh-100">
                   <div className="col-md-6">
-                    <h1 className="text-center mb-3">Welcome</h1>
+                    <h1 className="h1-login text-center mb-3">Welcome</h1>
                     <p className="text-center text-muted mb-5">
                       Log in into your exiting account
                     </p>
@@ -45,6 +45,7 @@ const Login = () => {
                       </div>
                       <div className="d-grid">
                         <button
+                          id="btn-login"
                           type="submit"
                           className="btn btn-primary btn-lg mt-4"
                         >
@@ -55,7 +56,7 @@ const Login = () => {
                         <small className="d-block">
                           <a
                             href="#"
-                            className="text-decoration-none text-muted"
+                            className="a-login text-decoration-none text-muted"
                           >
                             Forgot Password ?
                           </a>
@@ -63,7 +64,11 @@ const Login = () => {
                       </div>
                       <small className="d-block text-center text-muted mt-4">
                         Don’t have an account?
-                        <a className="text-decoration-none" href="#">
+                        <a
+                          id="a-login"
+                          className="text-decoration-none"
+                          href="#"
+                        >
                           Sign Up
                         </a>
                       </small>

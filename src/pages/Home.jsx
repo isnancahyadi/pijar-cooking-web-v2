@@ -82,7 +82,7 @@ const Home = () => {
       <section id="home" className="container-fluid">
         <div className="row align-items-center">
           <div className="main-title col-md-6 col-xs-12 order-2 order-md-1 text-md-start text-xs-start">
-            <h1 className="text-primary-emphasis">
+            <h1 className="h1-home text-primary-emphasis">
               Discover Recipe <br />& Delicious Food
             </h1>
             <div className="search mb-3 mt-3">
@@ -119,7 +119,7 @@ const Home = () => {
             <div className="bg-purple-decoration-2"></div>
           </div>
           <div className="col-auto">
-            <h2 className="text-primary-emphasis">Popular For You !</h2>
+            <h2 className="h2-home text-primary-emphasis">Popular For You !</h2>
           </div>
         </div>
         <div className="row align-items-center mt-5">
@@ -131,11 +131,11 @@ const Home = () => {
             <div className="bg-purple-decoration-3"></div>
           </div>
           <div className="recomended-title col-md-6 text-md-start text-center">
-            <h1 className="text-primary-emphasis">
+            <h1 className="h1-home text-primary-emphasis">
               American Shrimp <br />
               Fried Rice
             </h1>
-            <hr className="solid" style={{ borderTop: "2px solid" }} />
+            <hr className="hr-home solid" style={{ borderTop: "2px solid" }} />
             <p className="text-muted fs-5">
               Want to try a simple menu with a western style and a little taste
               of the sea? Here's the answer
@@ -163,17 +163,17 @@ const Home = () => {
                 <div className="bg-purple-decoration-5"></div>
               </div>
               <div className="col-auto">
-                <h2 className="text-primary-emphasis">New Recipe</h2>
+                <h2 className="h2-home text-primary-emphasis">New Recipe</h2>
               </div>
               <div className="col-auto">
                 <div className="bg-purple-decoration-5"></div>
               </div>
             </div>
-            <h1 className="text-primary-emphasis">
+            <h1 className="h1-home text-primary-emphasis">
               Chicken Curry with <br />
               Rice Noodles
             </h1>
-            <hr className="solid" style={{ borderTop: "2px solid" }} />
+            <hr className="hr-home solid" style={{ borderTop: "2px solid" }} />
             <p className="text-muted fs-5">
               Already come! New recipes with Asian flavors that are suitable for
               everyone. Want to try it?
@@ -220,7 +220,7 @@ const Home = () => {
             />
           </div>
           <div className="col-auto">
-            <h2 className="text-primary-emphasis">Popular Recipe</h2>
+            <h2 className="h2-home text-primary-emphasis">Popular Recipe</h2>
           </div>
           <div className="col-auto">
             <FontAwesomeIcon
@@ -275,7 +275,10 @@ const Home = () => {
                 className="d-block w-100 menu-recipe"
               />
               <div className="carousel-caption d-block">
-                <h2 style={{ textShadow: "2px 2px 4px #000000" }}>
+                <h2
+                  className="h2-home"
+                  style={{ textShadow: "2px 2px 4px #000000" }}
+                >
                   Spicy Fried Tubtim Fish Salad Spicy
                 </h2>
                 <p
@@ -293,7 +296,10 @@ const Home = () => {
                 className="d-block w-100 menu-recipe"
               />
               <div className="carousel-caption d-block">
-                <h2 style={{ textShadow: "2px 2px 4px #000000" }}>
+                <h2
+                  className="h2-home"
+                  style={{ textShadow: "2px 2px 4px #000000" }}
+                >
                   Sinigang na Lechon Kawali
                 </h2>
                 <p
@@ -311,7 +317,10 @@ const Home = () => {
                 className="d-block w-100 menu-recipe"
               />
               <div className="carousel-caption d-block">
-                <h2 style={{ textShadow: "2px 2px 4px #000000" }}>
+                <h2
+                  className="h2-home"
+                  style={{ textShadow: "2px 2px 4px #000000" }}
+                >
                   Penne Pasta Tomato Sauce with Chicken
                 </h2>
                 <p
@@ -354,7 +363,7 @@ const Home = () => {
       {/* <!-- start of footer --> */}
       <footer className="main-footer" style={{ position: "relative" }}>
         <div>
-          <h2 className="text-primary-emphasis text-center">
+          <h2 className="h2-home text-primary-emphasis text-center">
             Eat, Cook, Repeat
           </h2>
           <p className="text-muted text-center">

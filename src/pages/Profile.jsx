@@ -88,7 +88,7 @@ const Profile = () => {
             />
           </div>
           <div className="container mt-5">
-            <h1 className="text-center">Isnan Arif Cahyadi</h1>
+            <h1 className="h1-profile text-center">Isnan Arif Cahyadi</h1>
           </div>
         </div>
       </section>

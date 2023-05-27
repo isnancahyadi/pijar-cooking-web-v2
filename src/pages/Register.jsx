@@ -13,7 +13,9 @@ const Register = () => {
               <div className="container">
                 <div className="row justify-content-center align-items-center min-vh-100">
                   <div className="col-md-8">
-                    <h1 className="text-center mb-3">Let's Get Started!</h1>
+                    <h1 className="h1-register text-center mb-3">
+                      Let's Get Started!
+                    </h1>
                     <p className="text-center text-muted mb-4">
                       Create new account to access all features
                     </p>
@@ -72,6 +74,7 @@ const Register = () => {
                       </div>
                       <div className="d-grid">
                         <button
+                          id="btn-register"
                           type="submit"
                           className="btn btn-primary btn-lg mt-4"
                         >
@@ -80,7 +83,11 @@ const Register = () => {
                       </div>
                       <small className="d-block text-center text-muted mt-2">
                         Already have account?
-                        <a className="text-decoration-none" href="#">
+                        <a
+                          id="a-register"
+                          className="text-decoration-none"
+                          href="#"
+                        >
                           Log in Here
                         </a>
                       </small>
