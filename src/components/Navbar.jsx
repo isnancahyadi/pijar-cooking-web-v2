@@ -6,7 +6,7 @@ const Navbar = () => {
       <header id="header">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid mx-4">
-            <a className="navbar-brand" href="">
+            <a className="navbar-brand" href="/">
               <img
                 id="logo-app"
                 src="/assets/img/logo-2.svg"
@@ -32,7 +32,7 @@ const Navbar = () => {
             >
               <ul className="navbar-nav">
                 <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
+                  <a className="nav-link fs-4" href="/">
                     Home
                   </a>
                 </li>
@@ -42,7 +42,7 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
+                  <a className="nav-link fs-4" href="/profile">
                     Profile
                   </a>
                 </li>
@@ -51,7 +51,7 @@ const Navbar = () => {
                 <li className="nav-item mx-1">
                   <a
                     className="nav-link text-white fs-4"
-                    href="#"
+                    href="/login"
                     style={{ textShadow: "2px 2px 4px #000000" }}
                   >
                     Login
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <li className="nav-item mx-1">
                   <a
                     className="nav-link text-white fs-4"
-                    href="#"
+                    href="/register"
                     style={{ textShadow: "2px 2px 4px #000000" }}
                   >
                     Register

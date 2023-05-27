@@ -18,7 +18,7 @@ const Login = () => {
                       Log in into your exiting account
                     </p>
                     <hr size="1" color="#F5F5F5" />
-                    <form action="#">
+                    <form action="/">
                       <div className="mb-3">
                         <label className="form-label">E-mail</label>
                         <input
@@ -67,8 +67,9 @@ const Login = () => {
                         <a
                           id="a-login"
                           className="text-decoration-none"
-                          href="#"
+                          href="/register"
                         >
+                          {" "}
                           Sign Up
                         </a>
                       </small>

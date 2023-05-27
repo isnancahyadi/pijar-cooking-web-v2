@@ -20,7 +20,7 @@ const Register = () => {
                       Create new account to access all features
                     </p>
                     <hr size="1" color="#F5F5F5" />
-                    <form action="#">
+                    <form action="/login">
                       <div className="mb-3">
                         <label className="form-label">Fullname*</label>
                         <input
@@ -86,8 +86,9 @@ const Register = () => {
                         <a
                           id="a-register"
                           className="text-decoration-none"
-                          href="#"
+                          href="/login"
                         >
+                          {" "}
                           Log in Here
                         </a>
                       </small>

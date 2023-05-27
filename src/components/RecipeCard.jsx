@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const RecipeCard = (props) => {
   const { title, image } = props;
@@ -6,7 +7,10 @@ const RecipeCard = (props) => {
   return (
     <>
       <div className="col-md-4 col-xs-12">
-        <a href="" style={{ textDecoration: "none" }}>
+        <Link
+          to={`/detail/${title?.toLowerCase()?.split(" ")?.join("-")}`}
+          style={{ textDecoration: "none" }}
+        >
           <div
             className="my-recipe mt-2 mb-2"
             style={{
@@ -20,7 +24,7 @@ const RecipeCard = (props) => {
               {title}
             </h2>
           </div>
-        </a>
+        </Link>
       </div>
     </>
   );
