@@ -4,6 +4,10 @@
   color: rgb(215, 154, 255);
 }
 
+.input-register {
+  height: 60px;
+}
+
 #btn-register {
   height: 60px;
   font-family: "verdana";
@@ -24,6 +28,39 @@
   background-position: center;
 }
 
+.cont-form-register {
+  height: 100vh;
+}
+
 #a-register {
   color: rgb(215, 154, 255);
+}
+
+@media only screen and (max-width: 575px) {
+  .register-img {
+    height: 20vh;
+  }
+
+  .cont-form-register {
+    height: 70vh;
+  }
+
+  .txt-register,
+  .form-label,
+  #a-register {
+    font-size: 12px;
+  }
+
+  .h1-register {
+    font-size: 21px;
+  }
+
+  #btn-register {
+    font-size: 17px;
+    height: 50px;
+  }
+
+  .input-register {
+    height: 40px;
+  }
 }

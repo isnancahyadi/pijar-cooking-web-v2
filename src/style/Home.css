@@ -174,14 +174,14 @@ footer {
   }
 
   .bg-purple-decoration-3 {
-    top: calc(10%);
-    left: calc(5%);
+    top: calc(20%);
+    left: calc(10%);
   }
 
   .bg-purple-decoration-4 {
-    height: 50vh;
+    height: 43vh;
     left: 0;
-    top: calc(30%);
+    top: calc(14%);
     z-index: -1;
   }
 
@@ -190,16 +190,13 @@ footer {
   }
 
   #home .main-title,
-  #recomended .recomended-title {
+  #recomended .recomended-title,
+  .new-recipe-title {
     margin-top: 3rem;
   }
 
   #home .main-img {
     margin-top: 12rem;
-  }
-
-  .new-recipe-title {
-    margin-bottom: 3rem;
   }
 
   .search {
@@ -212,5 +209,23 @@ footer {
 
   #btn {
     height: 25px;
+  }
+
+  .ic-star {
+    font-size: 20px;
+  }
+
+  footer {
+    margin-top: 100px !important;
+    height: 150px !important;
+  }
+
+  .footer-copyright,
+  .footer-copyright a {
+    font-size: 11px;
+  }
+
+  .footer-slogan {
+    font-size: 9px;
   }
 }

@@ -4,6 +4,10 @@
   color: rgb(215, 154, 255);
 }
 
+.input-login {
+  height: 60px;
+}
+
 #btn-login {
   height: 60px;
   font-family: "verdana";
@@ -24,6 +28,39 @@
   background-position: center;
 }
 
+.cont-form-login {
+  height: 100vh;
+}
+
 #a-login {
   color: rgb(215, 154, 255);
+}
+
+@media only screen and (max-width: 575px) {
+  .login-img {
+    height: 20vh;
+  }
+
+  .cont-form-login {
+    height: 50vh;
+  }
+
+  .txt-login,
+  .form-label,
+  #a-login {
+    font-size: 12px;
+  }
+
+  .h1-login {
+    font-size: 21px;
+  }
+
+  #btn-login {
+    font-size: 17px;
+    height: 50px;
+  }
+
+  .input-login {
+    height: 50px;
+  }
 }

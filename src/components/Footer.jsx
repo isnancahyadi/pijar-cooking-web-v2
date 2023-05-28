@@ -8,7 +8,7 @@ const Footer = () => {
           <h2 className="h2-home text-primary-emphasis text-center">
             Eat, Cook, Repeat
           </h2>
-          <p className="text-muted text-center">
+          <p className="footer-slogan text-muted text-center">
             Share your best recipe by uploading here !
           </p>
         </div>

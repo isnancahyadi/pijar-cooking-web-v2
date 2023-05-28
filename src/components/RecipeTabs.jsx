@@ -7,7 +7,11 @@ const RecipeTabs = () => {
   return (
     <>
       {/* <!-- Start of tabs navs --> */}
-      <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+      <ul
+        className="title-recipe-tabs nav nav-tabs nav-justified mb-3"
+        id="ex1"
+        role="tablist"
+      >
         <li className="nav-item" role="presentation">
           <a
             className="nav-link active"

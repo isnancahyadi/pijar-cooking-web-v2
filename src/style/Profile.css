@@ -63,4 +63,8 @@
     width: 150px;
     height: 150px;
   }
+
+  .title-recipe-tabs {
+    font-size: 16px;
+  }
 }

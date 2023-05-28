@@ -60,7 +60,7 @@ const Home = () => {
           <div className="col-md-6 text-md-start text-center">
             <img
               className="menu-recipe"
-              src="/assets/img/recipe/american-shrimp-fried-rice-with-chili-fish-sauce.jpg"
+              src="/assets/img/recipe/chinese-shrimp-fried-rice-with-chili-fish-sauce.jpg"
             />
             <div className="bg-purple-decoration-3"></div>
           </div>
@@ -88,10 +88,10 @@ const Home = () => {
       <section
         id="new-recipe"
         className="container-fluid"
-        style={{ paddingTop: "150px", paddingBottom: "50px" }}
+        style={{ paddingTop: "100px", paddingBottom: "50px" }}
       >
         <div className="row align-items-center mt-5">
-          <div className="new-recipe-title col-md-6 text-md-start text-center">
+          <div className="new-recipe-title col-md-6 order-2 order-md-1 text-md-start text-center">
             <div className="row text-new-recipe">
               <div className="col-auto">
                 <div className="bg-purple-decoration-5"></div>
@@ -118,7 +118,7 @@ const Home = () => {
               </button>
             </form>
           </div>
-          <div className="col-md-6 text-md-start text-center">
+          <div className="col-md-6 order-1 order-md-2 text-md-start text-center">
             <img
               className="menu-recipe"
               src="/assets/img/recipe/chicken-curry-black-cup-with-rice-noodles.jpg"
@@ -133,21 +133,24 @@ const Home = () => {
       <section
         id="popular-recipe"
         className="container-fluid"
-        style={{ paddingTop: "150px", paddingBottom: "50px" }}
+        style={{ paddingTop: "100px", paddingBottom: "50px" }}
       >
         <div className="row align-items-center justify-content-center mb-5">
           <div className="col-auto">
             <FontAwesomeIcon
+              className="ic-star"
               icon="star"
               size="lg"
               style={{ color: "rgb(215, 154, 255)" }}
             />
             <FontAwesomeIcon
+              className="ic-star"
               icon="star"
               size="xl"
               style={{ color: "rgb(215, 154, 255)" }}
             />
             <FontAwesomeIcon
+              className="ic-star"
               icon="star"
               size="2xl"
               style={{ color: "rgb(215, 154, 255)" }}
@@ -158,16 +161,19 @@ const Home = () => {
           </div>
           <div className="col-auto">
             <FontAwesomeIcon
+              className="ic-star"
               icon="star"
               size="2xl"
               style={{ color: "rgb(215, 154, 255)" }}
             />
             <FontAwesomeIcon
+              className="ic-star"
               icon="star"
               size="xl"
               style={{ color: "rgb(215, 154, 255)" }}
             />
             <FontAwesomeIcon
+              className="ic-star"
               icon="star"
               size="lg"
               style={{ color: "rgb(215, 154, 255)" }}

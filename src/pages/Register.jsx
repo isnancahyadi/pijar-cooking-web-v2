@@ -11,12 +11,12 @@ const Register = () => {
           <div className="row">
             <div className="col-md-6 order-2">
               <div className="container">
-                <div className="row justify-content-center align-items-center min-vh-100">
+                <div className="row cont-form-register justify-content-center align-items-center">
                   <div className="col-md-8">
                     <h1 className="h1-register text-center mb-3">
                       Let's Get Started!
                     </h1>
-                    <p className="text-center text-muted mb-4">
+                    <p className="txt-register text-center text-muted mb-4">
                       Create new account to access all features
                     </p>
                     <hr size="1" color="#F5F5F5" />
@@ -25,50 +25,45 @@ const Register = () => {
                         <label className="form-label">Fullname*</label>
                         <input
                           type="text"
-                          className="form-control form-control-lg"
+                          className="input-register form-control form-control-lg"
                           placeholder="Enter your fullname"
-                          style={{ height: "10px" }}
                         />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">E-mail address*</label>
                         <input
                           type="email"
-                          className="form-control form-control-lg"
+                          className="input-register form-control form-control-lg"
                           placeholder="Enter e-mail address"
-                          style={{ height: "10px" }}
                         />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Phone Number</label>
                         <input
                           type="text"
-                          className="form-control form-control-lg"
+                          className="input-register form-control form-control-lg"
                           placeholder="Enter your phone number"
-                          style={{ height: "10px" }}
                         />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Create Password*</label>
                         <input
                           type="password"
-                          className="form-control form-control-lg"
+                          className="input-register form-control form-control-lg"
                           placeholder="Create Password"
-                          style={{ height: "10px" }}
                         />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Re-enter Password*</label>
                         <input
                           type="password"
-                          className="form-control form-control-lg"
+                          className="input-register form-control form-control-lg"
                           placeholder="Re-enter Password"
-                          style={{ height: "10px" }}
                         />
                       </div>
-                      <div className="form-check d-flex justify-content-start mb-2">
+                      <div className="txt-register form-check d-flex justify-content-start mb-2">
                         <input className="form-check-input" type="checkbox" />
-                        <label className="form-check-label ms-2">
+                        <label className="txt-register form-check-label ms-2">
                           I agree to terms & conditions
                         </label>
                       </div>
@@ -81,7 +76,7 @@ const Register = () => {
                           Register Account
                         </button>
                       </div>
-                      <small className="d-block text-center text-muted mt-2">
+                      <small className="txt-register d-block text-center text-muted mt-2">
                         Already have account?
                         <a
                           id="a-register"
@@ -97,7 +92,7 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 order-1">
+            <div className="register-img col-md-6 order-1">
               <div
                 className="img-login"
                 style={{ backgroundImage: "url('/assets/img/login-img.jpg')" }}
@@ -106,7 +101,7 @@ const Register = () => {
                   className="img-login"
                   style={{ backgroundColor: "rgba(215, 154, 255, 0.85)" }}
                 >
-                  <div className="row justify-content-center align-items-center vh-100">
+                  <div className="img-login row justify-content-center align-items-center">
                     <img
                       src="/assets/img/logo-3.svg"
                       style={{ width: "30%", height: "auto" }}

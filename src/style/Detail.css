@@ -80,4 +80,18 @@ footer {
     width: 100%;
     height: auto;
   }
+
+  footer {
+    margin-top: 100px !important;
+    height: 150px !important;
+  }
+
+  .footer-copyright,
+  .footer-copyright a {
+    font-size: 11px;
+  }
+
+  .footer-slogan {
+    font-size: 9px;
+  }
 }
