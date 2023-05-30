@@ -29,13 +29,13 @@ const Detail = () => {
           <h1 className="text-center text-primary-emphasis">
             {currentRecipe?.title}
           </h1>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center animate__animated animate__fadeIn">
             <img
               src={`/assets/img/recipe/${currentRecipe?.image}`}
               className="main-image"
             />
           </div>
-          <div className="container">
+          <div className="container animate__animated animate__fadeIn">
             <div className="row mt-5 justify-content-md-center">
               <div className="col-6">
                 <h2 className="h2-detail mb-3">Ingredients</h2>
@@ -98,7 +98,7 @@ const Detail = () => {
               </div>
             </div>
           </div>
-          <div className="container">
+          <div className="container animate__animated animate__fadeIn">
             <h2 className="h2-detail mt-5 mb-3">Video Directions</h2>
             <iframe
               className="video-directions"

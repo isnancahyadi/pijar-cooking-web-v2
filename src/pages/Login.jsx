@@ -9,7 +9,7 @@ const Login = () => {
       <section>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-6 order-2">
+            <div className="col-md-6 order-2 animate__animated animate__fadeIn">
               <div className="container">
                 <div className="row cont-form-login justify-content-center align-items-center">
                   <div className="col-md-6">
@@ -77,7 +77,7 @@ const Login = () => {
                 </div>
               </div>
             </div>
-            <div className="login-img col-md-6 order-1">
+            <div className="login-img col-md-6 order-1 animate__animated animate__fadeInLeft">
               <div
                 className="img-login"
                 style={{ backgroundImage: "url('/assets/img/login-img.jpg')" }}

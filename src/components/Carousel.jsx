@@ -7,7 +7,7 @@ const Carousel = () => {
     <>
       <div
         id="carouselExampleAutoplaying"
-        className="carousel slide"
+        className="carousel slide animate__animated animate__zoomIn"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">

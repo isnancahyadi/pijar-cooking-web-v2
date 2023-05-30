@@ -11,7 +11,7 @@ const Profile = () => {
 
       {/* <!-- Start of profile section --> */}
       <section id="content">
-        <div className="container-fluid">
+        <div className="container-fluid animate__animated animate__zoomIn">
           <div className="d-flex align-items-center justify-content-center">
             <img
               id="profile-pict"

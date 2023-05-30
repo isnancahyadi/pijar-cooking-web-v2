@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <header id="header">
+      <header className="animate__animated animate__fadeInDown" id="header">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid mx-4">
             <a className="navbar-brand" href="/">

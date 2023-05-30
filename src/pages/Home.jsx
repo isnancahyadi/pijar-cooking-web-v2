@@ -1,4 +1,5 @@
 import React from "react";
+import "animate.css";
 
 import "../style/Home.css";
 import Navbar from "../components/Navbar";
@@ -15,7 +16,7 @@ const Home = () => {
       {/* <!-- Start of home section --> */}
       <section id="home" className="container-fluid">
         <div className="row align-items-center">
-          <div className="main-title col-md-6 col-xs-12 order-2 order-md-1 text-md-start text-xs-start">
+          <div className="main-title col-md-6 col-xs-12 order-2 order-md-1 text-md-start text-xs-start animate__animated animate__fadeInLeft">
             <h1 className="h1-home text-primary-emphasis">
               Discover Recipe <br />& Delicious Food
             </h1>
@@ -31,14 +32,14 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="main-img col-md-6 order-1 order-md-2 d-flex justify-content-end">
+          <div className="main-img col-md-6 order-1 order-md-2 d-flex justify-content-end animate__animated animate__fadeInRight">
             <img
               className="menu-recipe"
               src="/assets/img/recipe/chicken-green-curry-bowl.jpg"
             />
           </div>
         </div>
-        <div className="bg-purple-decoration"></div>
+        <div className="bg-purple-decoration animate__animated animate__fadeInRight"></div>
       </section>
       {/* <!-- End of home section --> */}
 
@@ -53,7 +54,9 @@ const Home = () => {
             <div className="bg-purple-decoration-2"></div>
           </div>
           <div className="col-auto">
-            <h2 className="h2-home text-primary-emphasis">Popular For You !</h2>
+            <h2 className="h2-home text-primary-emphasis animate__animated animate__fadeInLeft">
+              Popular For You !
+            </h2>
           </div>
         </div>
         <div className="row align-items-center mt-5">
@@ -65,17 +68,20 @@ const Home = () => {
             <div className="bg-purple-decoration-3"></div>
           </div>
           <div className="recomended-title col-md-6 text-md-start text-center">
-            <h1 className="h1-home text-primary-emphasis">
+            <h1 className="h1-home text-primary-emphasis animate__animated animate__fadeIn">
               American Shrimp <br />
               Fried Rice
             </h1>
             <hr className="hr-home solid" style={{ borderTop: "2px solid" }} />
-            <p className="text-muted fs-5">
+            <p className="text-muted fs-5 animate__animated animate__fadeIn">
               Want to try a simple menu with a western style and a little taste
               of the sea? Here's the answer
             </p>
             <form action="#">
-              <button id="btn" className="btn btn-primary mt-3">
+              <button
+                id="btn"
+                className="btn btn-primary mt-3 animate__animated animate__fadeIn"
+              >
                 Learn More
               </button>
             </form>
@@ -91,7 +97,7 @@ const Home = () => {
         style={{ paddingTop: "100px", paddingBottom: "50px" }}
       >
         <div className="row align-items-center mt-5">
-          <div className="new-recipe-title col-md-6 order-2 order-md-1 text-md-start text-center">
+          <div className="new-recipe-title col-md-6 order-2 order-md-1 text-md-start text-center animate__animated animate__fadeInLeft">
             <div className="row text-new-recipe">
               <div className="col-auto">
                 <div className="bg-purple-decoration-5"></div>
@@ -135,7 +141,7 @@ const Home = () => {
         className="container-fluid"
         style={{ paddingTop: "100px", paddingBottom: "50px" }}
       >
-        <div className="row align-items-center justify-content-center mb-5">
+        <div className="row align-items-center justify-content-center mb-5 animate__animated animate__zoomIn">
           <div className="col-auto">
             <FontAwesomeIcon
               className="ic-star"

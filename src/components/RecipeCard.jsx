@@ -6,7 +6,7 @@ const RecipeCard = (props) => {
 
   return (
     <>
-      <div className="col-md-4 col-xs-12">
+      <div className="col-md-4 col-xs-12 animate__animated animate__tada">
         <Link
           to={`/detail/${title?.toLowerCase()?.split(" ")?.join("-")}`}
           style={{ textDecoration: "none" }}
