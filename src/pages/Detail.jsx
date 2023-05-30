@@ -104,7 +104,9 @@ const Detail = () => {
               className="video-directions"
               width="100%"
               height="100%"
-              src={currentRecipe?.video}
+              src={`https://www.youtube.com/embed/${
+                currentRecipe?.video?.split("=")[1]
+              }`}
               title={`How to Make - ${currentRecipe?.title}`}
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
