@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "../style/Register.css";
 
 const Register = () => {
+  useEffect(() => {
+    document.title = "Register";
+  }, []);
+
   return (
     <div className="Register">
       {/* <!-- Start of content --> */}

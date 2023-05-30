@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "../style/Login.css";
 
 const Login = () => {
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
+
   return (
     <div className="Login">
       {/* <!-- Start of content --> */}

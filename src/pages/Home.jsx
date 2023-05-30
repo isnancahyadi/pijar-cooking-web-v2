@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "animate.css";
 
 import "../style/Home.css";
@@ -9,6 +9,10 @@ import Carousel from "../components/Carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
+
   return (
     <div className="Home">
       <Navbar />

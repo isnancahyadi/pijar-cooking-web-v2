@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "../style/Profile.css";
 import Navbar from "../components/Navbar";
 import RecipeTabs from "../components/RecipeTabs";
 
 const Profile = () => {
+  useEffect(() => {
+    document.title = "My Profile";
+  }, []);
+
   return (
     <div className="Profile">
       <Navbar />

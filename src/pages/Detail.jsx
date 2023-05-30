@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import "../style/Detail.css";
@@ -11,10 +11,11 @@ const Detail = () => {
   const location = useLocation();
   const [currentRecipe, setCurrentRecipe] = React.useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const currentSlug = location?.pathname?.split("/")[2];
 
     window.scrollTo(0, 0);
+    document.title = "Detail Recipe";
 
     setCurrentRecipe(detailRecipe.find((res) => res.slug === currentSlug));
   }, []);
