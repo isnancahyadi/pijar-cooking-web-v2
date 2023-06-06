@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addAuth } from "../reducers/auth";
+
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -10,14 +13,17 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const state = useSelector((reducer) => reducer.auth);
 
   useEffect(() => {
     document.title = "Login";
   }, []);
 
   useEffect(() => {
-    if (localStorage.getItem("auth")) navigate("/profile");
-  }, []);
+    if (localStorage.getItem("auth") || state.auth) navigate("/profile");
+  }, [state]);
 
   const handleLogin = () => {
     axios
@@ -25,14 +31,14 @@ const Login = () => {
         username: username,
         password: password,
       })
-      .then(() => {
+      .then((result) => {
         Swal.fire({
           title: "Login Success",
           text: "Login success. Redirect to app...",
           icon: "success",
         }).then(() => {
           localStorage.setItem("auth", "true");
-          window.location.href = "/profile";
+          dispatch(addAuth(result));
         });
       })
       .catch((error) => {
