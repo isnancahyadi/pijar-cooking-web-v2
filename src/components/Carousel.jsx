@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CarouselIndicators from "./CarouselIndicators";
 import CarouselItem from "./CarouselItem";
 
+import axios from "axios";
+
 const Carousel = () => {
+  const [recipeList, setRecipeList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/recipe?page=1&limit=5")
+      .then((response) => setRecipeList(response?.data?.payload?.metadata));
+  });
+
   return (
     <>
       <div
@@ -11,11 +21,20 @@ const Carousel = () => {
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
-          <CarouselIndicators />
+          {recipeList.map((item, key) => (
+            <CarouselIndicators k={key} />
+          ))}
         </div>
 
         <div className="carousel-inner">
-          <CarouselItem />
+          {recipeList.map((item, key) => (
+            <CarouselItem
+              title={item?.title}
+              image={item?.image}
+              id={item?.id}
+              k={key}
+            />
+          ))}
         </div>
         <button
           className="carousel-control-prev"

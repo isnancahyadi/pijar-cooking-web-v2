@@ -48,24 +48,46 @@ const Navbar = () => {
                 </li>
               </ul>
               <ul className="navbar-nav">
-                <li className="nav-item mx-1">
-                  <a
-                    className="nav-link text-white fs-4"
-                    href="/login"
-                    style={{ textShadow: "2px 2px 4px #000000" }}
-                  >
-                    Login
-                  </a>
-                </li>
-                <li className="nav-item mx-1">
-                  <a
-                    className="nav-link text-white fs-4"
-                    href="/register"
-                    style={{ textShadow: "2px 2px 4px #000000" }}
-                  >
-                    Register
-                  </a>
-                </li>
+                {localStorage.getItem("auth") ? (
+                  <>
+                    <li className="nav-item mx-1">
+                      <a
+                        className="nav-link text-white fs-4"
+                        style={{
+                          textShadow: "2px 2px 4px #000000",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => {
+                          localStorage.clear();
+                          window.location.href = "/login";
+                        }}
+                      >
+                        Logout
+                      </a>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="nav-item mx-1">
+                      <a
+                        className="nav-link text-white fs-4"
+                        href="/login"
+                        style={{ textShadow: "2px 2px 4px #000000" }}
+                      >
+                        Login
+                      </a>
+                    </li>
+                    <li className="nav-item mx-1">
+                      <a
+                        className="nav-link text-white fs-4"
+                        href="/register"
+                        style={{ textShadow: "2px 2px 4px #000000" }}
+                      >
+                        Register
+                      </a>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </div>

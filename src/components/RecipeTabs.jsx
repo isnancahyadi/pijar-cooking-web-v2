@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 
-import recipeList from "../models/menu.json";
+import axios from "axios";
 
 const RecipeTabs = () => {
+  const [recipeList, setRecipeList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/recipe?page=1&limit=5")
+      .then((response) => setRecipeList(response?.data?.payload?.metadata));
+  });
+
   return (
     <>
       {/* <!-- Start of tabs navs --> */}
@@ -64,8 +72,12 @@ const RecipeTabs = () => {
             aria-labelledby="ex3-tab-1"
           >
             <div className="row">
-              {recipeList.menu.map((item, key) => (
-                <RecipeCard title={item?.title} image={item?.image} />
+              {recipeList.map((item) => (
+                <RecipeCard
+                  title={item?.title}
+                  image={item?.image}
+                  id={item?.id}
+                />
               ))}
             </div>
           </div>

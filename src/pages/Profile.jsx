@@ -1,12 +1,19 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../style/Profile.css";
 import Navbar from "../components/Navbar";
 import RecipeTabs from "../components/RecipeTabs";
 
 const Profile = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "My Profile";
+  }, []);
+
+  useEffect(() => {
+    if (!localStorage.getItem("auth")) navigate("/login");
   }, []);
 
   return (

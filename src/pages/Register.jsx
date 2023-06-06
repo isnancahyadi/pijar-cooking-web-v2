@@ -26,11 +26,11 @@ const Register = () => {
                     <hr size="1" color="#F5F5F5" />
                     <form action="/login">
                       <div className="mb-3">
-                        <label className="form-label">Fullname*</label>
+                        <label className="form-label">Username*</label>
                         <input
                           type="text"
                           className="input-register form-control form-control-lg"
-                          placeholder="Enter your fullname"
+                          placeholder="Enter a username you want"
                         />
                       </div>
                       <div className="mb-3">
@@ -39,14 +39,6 @@ const Register = () => {
                           type="email"
                           className="input-register form-control form-control-lg"
                           placeholder="Enter e-mail address"
-                        />
-                      </div>
-                      <div className="mb-3">
-                        <label className="form-label">Phone Number</label>
-                        <input
-                          type="text"
-                          className="input-register form-control form-control-lg"
-                          placeholder="Enter your phone number"
                         />
                       </div>
                       <div className="mb-3">

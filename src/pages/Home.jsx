@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "animate.css";
 
 import "../style/Home.css";
@@ -6,12 +7,22 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 
+import axios from "axios";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
+  const [recipeList, setRecipeList] = useState([]);
+
   useEffect(() => {
     document.title = "Home";
   }, []);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/recipe/new")
+      .then((response) => setRecipeList(response?.data?.payload[0]));
+  });
 
   return (
     <div className="Home">
@@ -114,25 +125,27 @@ const Home = () => {
               </div>
             </div>
             <h1 className="h1-home text-primary-emphasis">
-              Chicken Curry with <br />
-              Rice Noodles
+              {recipeList?.title}
             </h1>
             <hr className="hr-home solid" style={{ borderTop: "2px solid" }} />
             <p className="text-muted fs-5">
               Already come! New recipes with Asian flavors that are suitable for
               everyone. Want to try it?
             </p>
-            <form action="#">
+            <Link
+              to={`/detail/${recipeList?.title
+                ?.toLowerCase()
+                ?.split(" ")
+                ?.join("-")}?${recipeList?.id}`}
+              style={{ textDecoration: "none" }}
+            >
               <button id="btn" className="btn btn-primary mt-3">
                 Learn More
               </button>
-            </form>
+            </Link>
           </div>
           <div className="col-md-6 order-1 order-md-2 text-md-start text-center">
-            <img
-              className="menu-recipe"
-              src="/assets/img/recipe/chicken-curry-black-cup-with-rice-noodles.jpg"
-            />
+            <img className="menu-recipe" src={recipeList?.image} />
             <div className="bg-purple-decoration-4"></div>
           </div>
         </div>

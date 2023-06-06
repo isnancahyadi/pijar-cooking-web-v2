@@ -1,11 +1,49 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 import "../style/Login.css";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "Login";
   }, []);
+
+  useEffect(() => {
+    if (localStorage.getItem("auth")) navigate("/profile");
+  }, []);
+
+  const handleLogin = () => {
+    axios
+      .post("http://localhost:5000/auth/login", {
+        username: username,
+        password: password,
+      })
+      .then(() => {
+        Swal.fire({
+          title: "Login Success",
+          text: "Login success. Redirect to app...",
+          icon: "success",
+        }).then(() => {
+          localStorage.setItem("auth", "true");
+          window.location.href = "/profile";
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Login Failed",
+          text:
+            error?.response?.data?.message ?? "Something wrong with our app",
+          icon: "error",
+        });
+      });
+  };
 
   return (
     <div className="Login">
@@ -22,13 +60,18 @@ const Login = () => {
                       Log in into your exiting account
                     </p>
                     <hr size="1" color="#F5F5F5" />
-                    <form action="/">
+                    <form
+                      onSubmit={(event) => {
+                        event.preventDefault();
+                      }}
+                    >
                       <div className="mb-3">
-                        <label className="form-label">E-mail</label>
+                        <label className="form-label">Username or E-mail</label>
                         <input
-                          type="email"
+                          type="text"
                           className="input-login form-control form-control-lg"
-                          placeholder="E-mail"
+                          placeholder="Username or E-mail"
+                          onChange={(e) => setUsername(e.target.value)}
                         />
                       </div>
                       <div className="mb-3">
@@ -37,6 +80,7 @@ const Login = () => {
                           type="password"
                           className="input-login form-control form-control-lg"
                           placeholder="Password"
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                       </div>
                       <div className="txt-login form-check d-flex justify-content-start mb-3">
@@ -50,6 +94,7 @@ const Login = () => {
                           id="btn-login"
                           type="submit"
                           className="btn btn-primary btn-lg mt-4"
+                          onClick={handleLogin}
                         >
                           Log in
                         </button>
