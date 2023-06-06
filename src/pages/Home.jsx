@@ -20,7 +20,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/recipe/new")
+      .get(`${process.env.REACT_APP_BASE_URL}/recipe/new`)
       .then((response) => setRecipeList(response?.data?.payload[0]));
   });
 

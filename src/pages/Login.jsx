@@ -27,7 +27,7 @@ const Login = () => {
 
   const handleLogin = () => {
     axios
-      .post("http://localhost:5000/auth/login", {
+      .post(`${process.env.REACT_APP_BASE_URL}/auth/login`, {
         username: username,
         password: password,
       })

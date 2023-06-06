@@ -18,7 +18,7 @@ const Detail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/recipe/${id}`)
+      .get(`${process.env.REACT_APP_BASE_URL}/recipe/${id}`)
       .then((response) => setCurrentRecipe(response?.data?.payload[0]));
   });
 
