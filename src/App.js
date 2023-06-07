@@ -6,17 +6,22 @@ import Detail from "./pages/Detail";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import AddRecipe from "./pages/AddRecipe";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./store";
 import { Provider } from "react-redux";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faStar,
+  faImage,
+} from "@fortawesome/free-solid-svg-icons";
+
 import axios from "axios";
 
-library.add(faMagnifyingGlass, faStar);
+library.add(faMagnifyingGlass, faStar, faImage);
 
 const router = createBrowserRouter([
   {
@@ -38,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/recipe/add",
+    element: <AddRecipe />,
   },
 ]);
 

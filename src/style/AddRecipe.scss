@@ -1,0 +1,34 @@
+$base-color: rgb(215, 154, 255);
+
+.AddRecipe {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  min-height: 100vh;
+
+  #form-input-recipe {
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
+  #form-file {
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed $base-color;
+    height: 400px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+
+    .img-preview {
+      height: 380px;
+      width: auto;
+    }
+  }
+}

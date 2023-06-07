@@ -37,7 +37,7 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item mx-4">
-                  <a className="nav-link fs-4" href="#">
+                  <a className="nav-link fs-4" href="/recipe/add">
                     Add Recipe
                   </a>
                 </li>
