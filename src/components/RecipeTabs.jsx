@@ -8,8 +8,8 @@ const RecipeTabs = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}/recipe?page=1&limit=5`)
-      .then((response) => setRecipeList(response?.data?.payload?.metadata));
+      .get(`${process.env.REACT_APP_BASE_URL}/my-recipe`)
+      .then((response) => setRecipeList(response?.data?.payload));
   }, []);
 
   return (
