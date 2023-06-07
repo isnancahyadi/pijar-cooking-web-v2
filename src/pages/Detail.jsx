@@ -20,7 +20,7 @@ const Detail = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/recipe/${id}`)
       .then((response) => setCurrentRecipe(response?.data?.payload[0]));
-  });
+  }, []);
 
   return (
     <div className="Detail">

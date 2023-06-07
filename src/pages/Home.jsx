@@ -22,7 +22,7 @@ const Home = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/recipe/new`)
       .then((response) => setRecipeList(response?.data?.payload[0]));
-  });
+  }, []);
 
   return (
     <div className="Home">

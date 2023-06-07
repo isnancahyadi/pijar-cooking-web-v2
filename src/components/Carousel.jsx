@@ -11,7 +11,7 @@ const Carousel = () => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/recipe?page=1&limit=5`)
       .then((response) => setRecipeList(response?.data?.payload?.metadata));
-  });
+  }, []);
 
   return (
     <>
