@@ -9,7 +9,12 @@ const RecipeTabs = () => {
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/my-recipe`)
-      .then((response) => setRecipeList(response?.data?.payload));
+      .then((response) => {
+        setRecipeList(response?.data?.payload);
+      })
+      .catch((error) => {
+        return;
+      });
   }, []);
 
   return (
@@ -72,13 +77,25 @@ const RecipeTabs = () => {
             aria-labelledby="ex3-tab-1"
           >
             <div className="row">
-              {recipeList.map((item) => (
-                <RecipeCard
-                  title={item?.title}
-                  image={item?.image}
-                  id={item?.id}
-                />
-              ))}
+              {!recipeList.length ? (
+                <>
+                  <h2
+                    className="row align-items-center justify-content-center text-muted"
+                    style={{ opacity: ".25" }}
+                  >
+                    My recipe isn't available yet
+                  </h2>
+                </>
+              ) : (
+                recipeList.map((item) => (
+                  <RecipeCard
+                    title={item?.title}
+                    image={item?.image}
+                    id={item?.id}
+                  />
+                ))
+              )}
+              {}
             </div>
           </div>
         </div>
