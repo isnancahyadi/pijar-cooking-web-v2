@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 library.add(faMagnifyingGlass, faStar);
 
@@ -41,6 +42,20 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  axios.interceptors.request.use(
+    (config) => {
+      if (localStorage.getItem("token")) {
+        config.headers["Authorization"] = `Bearer ${localStorage.getItem(
+          "token"
+        )}`;
+      }
+      return config;
+    },
+    (error) => {
+      Promise.reject(error);
+    }
+  );
+
   return (
     <div className="App">
       <Provider store={store}>

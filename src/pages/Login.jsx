@@ -38,6 +38,8 @@ const Login = () => {
           icon: "success",
         }).then(() => {
           localStorage.setItem("auth", "true");
+          localStorage.setItem("token", result?.data?.payload?.token);
+
           dispatch(addAuth(result));
         });
       })

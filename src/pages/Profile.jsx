@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import "../style/Profile.css";
 import Navbar from "../components/Navbar";
 import RecipeTabs from "../components/RecipeTabs";
+import axios from "axios";
 
 const Profile = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     document.title = "My Profile";
@@ -15,6 +17,12 @@ const Profile = () => {
 
   useEffect(() => {
     if (!localStorage.getItem("auth")) navigate("/login");
+  }, []);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_BASE_URL}/user`).then((result) => {
+      setUser(result?.data?.payload[0]);
+    });
   }, []);
 
   return (
@@ -27,13 +35,13 @@ const Profile = () => {
           <div className="d-flex align-items-center justify-content-center">
             <img
               id="profile-pict"
-              src="/assets/img/profile/profile-1.jpg"
+              src={user?.profile_picture}
               className="rounded-circle"
               style={{ objectFit: "cover" }}
             />
           </div>
           <div className="container mt-5">
-            <h1 className="h1-profile text-center">Isnan Arif Cahyadi</h1>
+            <h1 className="h1-profile text-center">{user?.fullname}</h1>
           </div>
         </div>
       </section>
